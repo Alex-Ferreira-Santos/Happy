@@ -63,10 +63,6 @@ export default function OrphanageDetails() {
               />
             )
           })}
-
-
-          <Image style={styles.image} source={{ uri: 'https://fmnova.com.br/images/noticias/safe_image.jpg' }} />
-          <Image style={styles.image} source={{ uri: 'https://fmnova.com.br/images/noticias/safe_image.jpg' }} />
         </ScrollView>
       </View>
 
