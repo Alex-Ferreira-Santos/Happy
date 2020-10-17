@@ -19,6 +19,7 @@ export default function CreateOrphanage() {
   const [about, setAbout] = useState('')
   const [instructions, setInstructions] = useState('')
   const [opening_hours, setOpeningHours] = useState('')
+  const [whatsapp, setWhatsapp] = useState('')
   const [open_on_weekends, setOpenOnWeekends] = useState(true)
   const [images, setImages] = useState<File[]>([])
   const [previewImages, setPreviewImages] = useState<string[]>([])
@@ -45,12 +46,13 @@ export default function CreateOrphanage() {
     data.append('instructions', instructions)
     data.append('opening_hours', opening_hours)
     data.append('open_on_weekends', String(open_on_weekends))
+    data.append('whatsapp', whatsapp)
     images.forEach(image => {
       data.append('images',image)
     })
     
     await api.post('orphanages',data)
-
+    alert(whatsapp)
     alert('Cadastro realizado com sucesso')
     history.push('/app')
   }
@@ -113,11 +115,19 @@ export default function CreateOrphanage() {
             <div className="input-block">
               <label htmlFor="about">Sobre <span>Máximo de 300 caracteres</span></label>
               <textarea 
-                id="name" 
+                id="about" 
                 maxLength={300}
                 value={about} 
                 onChange={event => setAbout(event.target.value)}
               />
+            </div>
+
+            <div className="input-block">
+              <label htmlFor="whatsapp">Número do Whatsapp</label>
+              <input 
+                id="whatsapp"
+                value={whatsapp}
+                onChange={event => setWhatsapp(event.target.value)}/>
             </div>
 
             <div className="input-block">
