@@ -3,7 +3,12 @@ import LoginSideBar from '../components/LoginSidebar'
 
 function Login(){
     return(
-        <LoginSideBar/>
+        <div>
+            <LoginSideBar/>
+            <aside>
+                <p className="fazLogin">Fazer Login</p>
+            </aside>
+        </div>
     )
 }
 
