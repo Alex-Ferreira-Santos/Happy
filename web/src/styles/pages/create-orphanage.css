@@ -74,6 +74,13 @@ form.create-orphanage-form .input-block textarea {
   color: #5C8599;
 }
 
+form.create-orphanage-form .input-block input::placeholder,
+form.create-orphanage-form .input-block textarea::placeholder{
+  color: rgba(92, 133, 153,0.4);
+}
+
+
+
 form.create-orphanage-form .input-block input {
   height: 64px;
   padding: 0 16px;

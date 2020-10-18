@@ -36,7 +36,6 @@ export default function Orphanage() {
   const [orphanage, setOrphanage] = useState<Orphanage>()
   const [activeImageIndex, setActiveImageIndex] = useState(0)
 
-
     useEffect( () => {
         api.get(`orphanages/${params.id}`).then(response => {
             setOrphanage(response.data)
@@ -74,7 +73,7 @@ export default function Orphanage() {
           </div>
           
           <div className="orphanage-details-content">
-            <h1>{orphanage.name}</h1>
+          <h1>{orphanage.name}</h1>
             <p>{orphanage.about}</p>
 
             <div className="map-container">
@@ -124,7 +123,7 @@ export default function Orphanage() {
                 </div>
               )}
             </div>
-
+            
             <a target="_blank" rel="noopener noreferrer" href={`https://wa.me/${orphanage.whatsapp}`} className="contact-button">
               <FaWhatsapp size={20} color="#FFF" />
               Entrar em contato

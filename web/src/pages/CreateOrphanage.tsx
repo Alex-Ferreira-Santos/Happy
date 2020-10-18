@@ -52,7 +52,6 @@ export default function CreateOrphanage() {
     })
     
     await api.post('orphanages',data)
-    alert(whatsapp)
     alert('Cadastro realizado com sucesso')
     history.push('/app')
   }
@@ -83,7 +82,7 @@ export default function CreateOrphanage() {
             <legend>Dados</legend>
 
             <Map 
-              center={[-27.2092052,-49.6401092]} 
+              center={[-22.8984365,-43.4502295]} 
               style={{ width: '100%', height: 280 }}
               zoom={15}
               onClick={handleMapClick}
@@ -109,7 +108,10 @@ export default function CreateOrphanage() {
               <input 
                 id="name" 
                 value={name} 
-                onChange={event => setName(event.target.value)} />
+                onChange={event => setName(event.target.value)} 
+                placeholder="Digite o nome da instituição"
+              />
+                
             </div>
 
             <div className="input-block">
@@ -119,6 +121,7 @@ export default function CreateOrphanage() {
                 maxLength={300}
                 value={about} 
                 onChange={event => setAbout(event.target.value)}
+                placeholder="Digite a descrição da instituição"
               />
             </div>
 
@@ -127,7 +130,9 @@ export default function CreateOrphanage() {
               <input 
                 id="whatsapp"
                 value={whatsapp}
-                onChange={event => setWhatsapp(event.target.value)}/>
+                onChange={event => setWhatsapp(event.target.value)}
+                placeholder="5500987654321"
+              />
             </div>
 
             <div className="input-block">
@@ -160,6 +165,7 @@ export default function CreateOrphanage() {
                 id="instructions"
                 value={instructions}
                 onChange={event => setInstructions(event.target.value)}
+                placeholder="Digite as instruções"
               />
             </div>
 
@@ -169,6 +175,7 @@ export default function CreateOrphanage() {
                 id="opening_hours"
                 value={opening_hours} 
                 onChange={event => setOpeningHours(event.target.value)}
+                placeholder="Das 00 as 00"
               />
             </div>
 
