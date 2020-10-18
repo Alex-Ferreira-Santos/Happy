@@ -6,7 +6,7 @@
     flex-direction: column;
     width: 100%;
     height: 100vh;
-    max-width: 920px;
+    max-width: 57.5em;
 }
 
 #estado{
@@ -16,5 +16,5 @@
 }
 
 #cidade{
-    font-weight: none;
+    font-weight: normal;
 }
